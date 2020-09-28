@@ -1,12 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import User from '../views/User.vue'
-
+import Settle from '../views/Settle.vue'
+import Orders from '../views/Orders.vue'
+import Bill from '../views/Bill.vue'
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/settle',
+    component: Settle
+  },
+  {
+    path: '/orders',
+    component: Orders
+  },
+  {
+    path: '/bill',
+    component: Bill
+  },
   {
     path: '/user',
     name: 'User',

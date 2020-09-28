@@ -1,6 +1,7 @@
 <template>
     <div>
         <WaiterNav></WaiterNav>
+        结账
     </div>
 </template>
 
@@ -10,10 +11,9 @@ export default {
     components:{
         WaiterNav
     }
-    
 }
 </script>
 
-<style lang="css">
+<style lang="">
     
 </style>
