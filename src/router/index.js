@@ -1,44 +1,64 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import User from '../views/User.vue'
-import Settle from '../views/Settle.vue'
-import Orders from '../views/Orders.vue'
-import Bill from '../views/Bill.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import User from "../views/User.vue";
+import Settle from "../views/Settle.vue";
+import Orders from "../views/Orders.vue";
+import Bill from "../views/Bill.vue";
+import UserInfo from "../views/UserInfo.vue";
+import Login from "../views/Login.vue";
+import Register from "../views/Register.vue";
 
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/settle',
-    component: Settle
+    path: "/login",
+    component: Login,
   },
   {
-    path: '/orders',
-    component: Orders
+    path: "/userInfo",
+    component: UserInfo,
+    children: [
+      {
+        path: "/userInfo/login",
+        component: Login,
+      },
+      {
+        path: "/userInfo/register",
+        component: Register,
+      },
+    ],
   },
   {
-    path: '/bill',
-    component: Bill
+    path: "/settle",
+    component: Settle,
   },
   {
-    path: '/user',
-    name: 'User',
-    component: User
+    path: "/orders",
+    component: Orders,
   },
   {
-    path: '/server',
-    name: 'Server',
+    path: "/bill",
+    component: Bill,
+  },
+  {
+    path: "/user",
+    name: "User",
+    component: User,
+  },
+  {
+    path: "/server",
+    name: "Server",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-     component: () => import(/* webpackChunkName: "about" */ '../views/Server.vue')
-   
-  }
-]
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Server.vue"),
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
