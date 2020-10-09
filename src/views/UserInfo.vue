@@ -8,7 +8,7 @@
           <!-- 头像 -->
           <img
             id="user-img" 
-            src="../assets/userInfo.jpg" 
+            src="../assets/img-userInfo.jpg" 
             class="rounded-circle">
           <!-- 登录注册按钮 -->
           <div class="row img-user">
