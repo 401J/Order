@@ -7,6 +7,7 @@ import Bill from "../views/Bill.vue";
 import UserInfo from "../views/UserInfo.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
+import waiterOrder from "../views/waiterOrder.vue"
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,10 @@ const routes = [
     component: Bill,
   },
   {
+    path: "/waiterOrder",
+    component : waiterOrder
+  },
+  {
     path: "/user",
     name: "User",
     component: User,
@@ -58,7 +63,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes,
 });
 
